@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// 的あてゲームのスイッチのコライダーを動かすためのスクリプト
+/// </summary>
 public class MiniGameStart : MonoBehaviour
 {
     

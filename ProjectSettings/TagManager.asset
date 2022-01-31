@@ -11,6 +11,9 @@ TagManager:
   - UIManager
   - MiniGameSwitch
   - Switch
+  - Metal
+  - ExplosiveBarrel
+  - ReturnTitle
   layers:
   - Default
   - TransparentFX
