@@ -45,7 +45,7 @@ public class ShotCreateVR : MonoBehaviour
 
         timeCount++;
         //JoyConのZRボタンもしくはマウスの左クリックで発射
-        if (Input.GetKey(KeyCode.Joystick1Button15)||
+        if (Input.GetKey(KeyCode.JoystickButton0)||
             Input.GetMouseButton(0))
         {
             //弾発射時にJoyCon振動
