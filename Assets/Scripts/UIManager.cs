@@ -82,7 +82,7 @@ public class UIManager : MonoBehaviour
         scoreText.text = "スコア:" + score.ToString();
 
         //isStoopde = false;
-        if (isStoopde)
+        if (isStoopde&& isStartMiniGame == false)
         {
             targetScripts.score = 0;
         }

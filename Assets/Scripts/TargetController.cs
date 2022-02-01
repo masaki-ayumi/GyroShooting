@@ -21,6 +21,8 @@ public class TargetController : MonoBehaviour
 
     EffectScript effectScript;
 
+    UIManager uiManagerScript;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,9 @@ public class TargetController : MonoBehaviour
 
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         player = mainCamera.transform;
+
+        GameObject uiManager = GameObject.FindGameObjectWithTag("UIManager");
+        uiManagerScript = uiManager.GetComponent<UIManager>();
     }
 
     // Update is called once per frame
@@ -41,7 +46,7 @@ public class TargetController : MonoBehaviour
         transform.LookAt(player.transform);
         transform.rotation *= Quaternion.Euler(90f, 0f, 0f);
 
-       
+
     }
 
 
@@ -55,7 +60,7 @@ public class TargetController : MonoBehaviour
         count++;
         if (count >= 10)
         {
-            
+
             audioScript.ExplosionSE();
 
             count = 0;
@@ -71,8 +76,12 @@ public class TargetController : MonoBehaviour
             //新しい座標を代入
             trans.transform.position = targetVector;
 
-            //スコア加算
-            score += 1;
+            //ミニゲームが始まった時だけ加算
+            if (uiManagerScript.isStartMiniGame)
+            {
+                //スコア加算
+                score += 1;
+            }
         }
     }
 
