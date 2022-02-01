@@ -16,8 +16,10 @@ public class MiniGameSwitch : MonoBehaviour
     private GameObject target;
     private Vector3 targetPosition;
 
-    public GameObject score;
-    public GameObject time;
+    private GameObject score;
+    private GameObject time;
+
+    private GameObject returnTitle;
 
     // Start is called before the first frame update
     void Start()
@@ -30,10 +32,17 @@ public class MiniGameSwitch : MonoBehaviour
 
         switchObject = GameObject.FindGameObjectWithTag("Switch");
 
+        returnTitle = GameObject.FindGameObjectWithTag("ReturnTitle");
+
+        score = GameObject.FindGameObjectWithTag("Score");
+        time = GameObject.FindGameObjectWithTag("Time");
+
         score.SetActive(false);
         time.SetActive(false);
 
         switchObject.SetActive(true);
+
+        returnTitle.SetActive(true);
     }
 
     // Update is called once per frame
@@ -46,7 +55,7 @@ public class MiniGameSwitch : MonoBehaviour
         {
             switchObject.SetActive(true);
 
-            //score.SetActive(false);
+            returnTitle.SetActive(true);
             time.SetActive(false);
         }
     }
@@ -66,6 +75,7 @@ public class MiniGameSwitch : MonoBehaviour
             time.SetActive(true);
 
             switchObject.SetActive(false);
+            returnTitle.SetActive(false);
         }
         //switchObject.SetActive(true);
 
