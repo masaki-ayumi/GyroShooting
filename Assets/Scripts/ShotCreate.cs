@@ -36,21 +36,14 @@ public class ShotCreate : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //JoyConの情報のインスタンスを取得
-        //var joycons = JoyconManager.Instance.j;
-        //var joyconR = joycons.Find(c => !c.isLeft); // Joy-Con (R)
-
-
-
+       
 
         timeCount++;
         //JoyConのZRボタンもしくはマウスの左クリックで発射
         if (Input.GetMouseButton(0)||
             Input.GetKey(KeyCode.Joystick1Button0))
         {
-            //弾発射時にJoyCon振動
-            //joyconR.SetRumble(160, 320, 0.6f, 1000);
-
+          
             //弾を等間隔で発射
             if (timeCount % 6 == 0)
             {

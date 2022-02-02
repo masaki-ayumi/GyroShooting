@@ -15,9 +15,7 @@ public class Shot : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //speed = speed * Time.deltaTime;
-        //rigidbody.velocity = transform.forward * speed;
-        //rigidbody.velocity = vector;
+        
         shotRigidbody.AddForce(transform.forward * speed);
 
 

@@ -48,8 +48,6 @@ public class MiniGameSwitch : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(switchObject.activeSelf);
-        //switchObject.SetActive(isActive);
 
         if (uiManagerScript.isStoopde == true)
         {
@@ -77,21 +75,7 @@ public class MiniGameSwitch : MonoBehaviour
             switchObject.SetActive(false);
             returnTitle.SetActive(false);
         }
-        //switchObject.SetActive(true);
 
     }
-    //public void OnTriggerEnter(Collider other)
-    //{
-    //    target.transform.position = targetPosition;
-
-    //    isStartMiniGame = true;
-    //    uiManagerScript.isStartMiniGame = isStartMiniGame;
-
-    //    score.SetActive(true);
-    //    time.SetActive(true);
-
-    //    switchObject.SetActive(false);
-
-
-    //}
+   
 }

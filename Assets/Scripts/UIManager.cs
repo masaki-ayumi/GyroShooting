@@ -40,7 +40,6 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         ShootingGame(isStartMiniGame);
-        MenuUI(isStoopde);
 
 
     }
@@ -81,18 +80,11 @@ public class UIManager : MonoBehaviour
         //スコア画面表示
         scoreText.text = "スコア:" + score.ToString();
 
-        //isStoopde = false;
         if (isStoopde&& isStartMiniGame == false)
         {
             targetScripts.score = 0;
         }
     }
 
-    public void MenuUI(bool isStoopde)
-    {
-        //if (isStoopde)
-        //{
-        //    menuObject.SetActive(true);
-        //}
-    }
+   
 }

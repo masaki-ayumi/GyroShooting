@@ -79,7 +79,6 @@ public class TargetController : MonoBehaviour
             //ミニゲームが始まった時だけ加算
             if (uiManagerScript.isStartMiniGame)
             {
-                //スコア加算
                 score += 1;
             }
         }

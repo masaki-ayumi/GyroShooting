@@ -36,10 +36,7 @@ public class ShotCreateVR : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        //JoyConの情報のインスタンスを取得
-        //var joycons = JoyconManager.Instance.j;
-        //var joyconR = joycons.Find(c => !c.isLeft); // Joy-Con (R)
-
+       
 
 
 
